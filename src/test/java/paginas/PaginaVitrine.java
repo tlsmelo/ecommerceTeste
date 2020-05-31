@@ -19,4 +19,8 @@ public class PaginaVitrine {
     @FindBy(how = How.XPATH, using = "//div[@class='bf-shelf bf-shelf--aside']")
     public WebElement vitrine;
 
+    //botão Comprar
+    @FindBy(how = How.XPATH, using = "//button[contains(text(), 'Comprar')]")
+    public WebElement botaoComprar;
+
 }
