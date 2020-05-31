@@ -1,4 +1,4 @@
-package ForneceDados;
+package forneceDados;
 
 import com.google.common.base.Strings;
 
@@ -43,8 +43,10 @@ public class ConfigFileReader {
         }
     }
 
-    public String getCasasBahiaUrl() {
-        return readProperty("casasBahia_url");
+    public String getEletrumUrl() {
+        return readProperty("eletrum_url");
     }
+
+    public String getCliente1(){ return readProperty("cliente1");}
 
 }
