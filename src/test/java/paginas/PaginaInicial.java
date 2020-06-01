@@ -36,4 +36,27 @@ public class PaginaInicial {
         botaoPesquisa.click();
     }
 
+    //Quantidade itens carrinho
+    @FindBy(how = How.XPATH, using = "//div[@class='bf-badge bf-badge--amount-in-cart']/span")
+    public WebElement qtdItensCarrinho;
+
+    //Link ícone do carrinho
+    @FindBy(how = How.XPATH, using = "//div[@class='bf-header-page__mini-cart bf-js-header-page__mini-cart bf-minicart__toggle d-none d-sm-block']")
+    public WebElement linkIconeCarrinho;
+
+    //Mini página carrinho - botão Finalizar Compra
+    @FindBy(how = How.XPATH, using = "//div[@class='bf-minicart__btns']/a[@class='bf-minicart__btn bf-minicart__btn--checkout']")
+    public WebElement botaoFinalizarCompra;
+
+    //Mini página carrinho - link Continuar comprando
+    @FindBy(how = How.XPATH, using = "//div[@class='bf-minicart__btns']/button[@class='bf-minicart__btn']")
+    public WebElement botaoContinuarComprando;
+
+    //Mini página carrinho - descrição do produto
+    @FindBy(how = How.XPATH, using = "//h1[@class='bf-cart__title']/a")
+    public WebElement descricaoProduto;
+
+    //Mini página carrinho - valor total
+    @FindBy(how = How.XPATH, using = "//p[@class='bf-minicart__total']/span[2]")
+    public WebElement valorTotal;
 }
