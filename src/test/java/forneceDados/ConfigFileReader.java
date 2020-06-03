@@ -49,4 +49,6 @@ public class ConfigFileReader {
 
     public String getCliente1(){ return readProperty("cliente1");}
 
+    public String getCliente2(){ return readProperty("cliente2");}
+
 }

@@ -1,5 +1,6 @@
 package stepDefinitions;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -23,6 +24,17 @@ public class PassosAbstratos {
         wait.until(ExpectedConditions.invisibilityOf(webElement));
     }
 
+    public static void EsperarElementoAtivar(WebDriver driverAtivo, WebElement webElement){
+        WebDriverWait wait = new WebDriverWait(driverAtivo, 30);
+        wait.until((ExpectedConditions.elementToBeClickable(webElement)));
+    }
+
+    public static void EsperarElementoComTexto (WebDriver driverAtivo, String texto, WebElement webElement){
+        WebDriverWait wait = new WebDriverWait(driverAtivo, 30);
+        wait.until((ExpectedConditions.textToBePresentInElement(webElement, texto)));
+    }
+
+
     public static void explicitWaitMs (Integer waitMs){
         try{
             Thread.sleep(waitMs);
@@ -31,4 +43,5 @@ public class PassosAbstratos {
             Thread.currentThread().interrupt();
         }
     }
+
 }

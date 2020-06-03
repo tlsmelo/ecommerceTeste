@@ -67,4 +67,16 @@ public class PaginaCarrinho {
     @FindBy(how = How.XPATH, using = "//a[@class='btn btn-large btn-success link-choose-products']")
     public WebElement botaoEscolherProdutos;
 
+    //Campo Email - Finalizar Compra
+    @FindBy(how = How.XPATH, using = "//input[@id='client-pre-email']")
+    public WebElement campoEmail;
+
+    //Botão Continuar - Finalizar Compra
+    @FindBy(how = How.XPATH, using = "//button[@id='btn-client-pre-email']")
+    public WebElement botaoContinuar;
+
+    //Link Voltar para o carrinho - Finalizar Compra
+    @FindBy(how = How.XPATH, using = "//p[@class='link link-cart pull-right']/small/a[@id='orderform-to-cart']")
+    public WebElement linkVoltarCarrinho;
+
 }
